@@ -1,0 +1,23 @@
+<form [formGroup]="userForm">
+  <div>邮箱：
+      <input formControlName="email" type="text">
+  </div>
+  <div>昵称：
+      <input formControlName="name" type="text">
+  </div>
+
+  <div formGroupName="passwordGroup">
+    <div>密码：
+      <input formControlName="password" type="password">
+    </div>
+    <div>确认密码：
+      <input formControlName="passwordConfirm" type="password">
+    </div>
+  </div>
+
+  <button (click)="signup()">注册</button>
+</form>
+
+FormGroup对象实时绑定：{{userForm.value | json}}
+<br>
+User对象实时绑定：{{user | json}}

@@ -1,0 +1,22 @@
+<hr>
+<p>
+  <button (click)="getProducts()">获取产品列表</button>
+</p>
+<p>
+  {{products | json}}
+</p>
+<hr>
+<app-component-a></app-component-a>
+<app-component-b></app-component-b>
+
+<div>
+  <button (click)="addProduct()">添加产品</button>
+</div>
+
+<div>
+  {{productobserver1}}
+</div>
+
+<div>
+  {{productobserver2}}
+</div>

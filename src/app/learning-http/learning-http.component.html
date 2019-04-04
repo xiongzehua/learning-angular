@@ -1,0 +1,26 @@
+<p>
+  /api/product/list
+</p>
+<p>
+  <button (click)="productList()">查询产品列表</button>
+</p>
+
+<p>
+  {{products | json}}
+</p>
+
+<hr>
+
+<form [formGroup]="createForm">
+  <div>名称：<input formControlName="name"></div>
+  <div>价格：<input formControlName="price"></div>
+  <div>库存：<input formControlName="stock"></div>
+  <div><button (click)="getByParam()">查询产品</button> /api/product/getByParam</div>
+  <div><button (click)="getByRestful()">查询产品</button> /api/product/getByRestful</div>
+  <div><button (click)="createByParam()">新增产品</button> /api/product/createByParam</div>
+  <div><button (click)="createByJson()">新增产品</button> /api/product/createByJson</div>
+</form>
+
+<p>
+  结果集：
+</p>

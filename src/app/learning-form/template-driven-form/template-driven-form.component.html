@@ -1,0 +1,17 @@
+<form ngForm>
+    <div>邮箱：
+        <input [(ngModel)]="user.email" name="email" type="text" id="email">
+    </div>
+    <div>昵称：
+        <input [(ngModel)]="user.name" name="name" type="text" id="name">
+    </div>
+    <div>密码：
+        <input [(ngModel)]="user.password" name="password" type="password">        
+    </div>
+    <div>确认密码：
+        <input [(ngModel)]="user.passwordConfirm" name="passwordConfirm" type="password">
+    </div>
+    <button (click)="signup()">注册</button>
+</form>
+
+表单数据实时绑定：{{user | json}}
